@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8C-nH-7Tk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="Kkq-rF-Ypa">
+            <objects>
+                <viewController id="Wi7-oz-CVj" customClass="VideoVC" customModule="Day9CollectionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4H-0a-tE7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rQ-8C-MgJ">
+                                <rect key="frame" x="108" y="262" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play the video">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlayAction:" destination="Wi7-oz-CVj" eventType="touchUpInside" id="1kS-aO-0z0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="df0-5A-FfJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="Video.png" id="3w9-RO-CPu"/>
+                    <navigationItem key="navigationItem" id="Ssf-hv-6r8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilD-tc-Y6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="784"/>
+        </scene>
+        <!--Books-->
+        <scene sceneID="HkY-MT-iZA">
+            <objects>
+                <collectionViewController id="Hyw-3e-OUG" customClass="BooksCVC" customModule="Day9CollectionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uPJ-Ge-H1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="icw-GA-RRe">
+                            <size key="itemSize" width="255" height="251"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="hq2-MJ-PMZ" customClass="BookCell" customModule="Day9CollectionTabBar" customModuleProvider="target">
+                                <rect key="frame" x="60" y="0.0" width="255" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="255" height="251"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZO-Xn-oYK">
+                                            <rect key="frame" x="30" y="0.0" width="197" height="202"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9L-Uj-Q90">
+                                            <rect key="frame" x="0.0" y="218" width="255" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="imgBook" destination="yZO-Xn-oYK" id="87o-yY-zCE"/>
+                                    <outlet property="lblBookTitle" destination="y9L-Uj-Q90" id="0Ll-39-BIn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Hyw-3e-OUG" id="AwQ-L5-D5j"/>
+                            <outlet property="delegate" destination="Hyw-3e-OUG" id="K9n-wD-5vJ"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Books" image="Books.png" id="SRV-kC-8ip"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPp-ab-lx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="90"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8q2-iP-EXN">
+            <objects>
+                <tabBarController id="Q8C-nH-7Tk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GEW-Ca-kT4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hyw-3e-OUG" kind="relationship" relationship="viewControllers" id="uiO-4y-Yen"/>
+                        <segue destination="u85-Gn-aXD" kind="relationship" relationship="viewControllers" id="Gn5-pW-FUH"/>
+                        <segue destination="Wi7-oz-CVj" kind="relationship" relationship="viewControllers" id="GVg-5r-CZR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjy-7d-vVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1070" y="470"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dHj-6k-MRv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u85-Gn-aXD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="YHg-qx-E1U"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bDC-LV-hFD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aLE-x2-q0l" kind="relationship" relationship="rootViewController" id="aIX-Xa-4Cz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTD-Y0-U2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="1453"/>
+        </scene>
+        <!--ContactTVC-->
+        <scene sceneID="WG6-bd-mTC">
+            <objects>
+                <tableViewController id="aLE-x2-q0l" customClass="ContactTVC" customModule="Day9CollectionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NFO-eJ-HVf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" textLabel="QUH-dy-dPv" detailTextLabel="Qnx-Nd-CbW" rowHeight="70" style="IBUITableViewCellStyleValue1" id="FGd-q0-Jc7" customClass="ContactsCell" customModule="Day9CollectionTabBar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FGd-q0-Jc7" id="azh-sE-N1m" customClass="ContactsCell" customModule="Day9CollectionTabBar" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QUH-dy-dPv">
+                                            <rect key="frame" x="16" y="25" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qnx-Nd-CbW">
+                                            <rect key="frame" x="300" y="25" width="59" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contactsList" destination="azh-sE-N1m" id="eL2-gm-oa4"/>
+                                    <outlet property="lblSubtitle" destination="Qnx-Nd-CbW" id="ezh-un-bSH"/>
+                                    <outlet property="lbltitle" destination="QUH-dy-dPv" id="64h-HT-cfP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aLE-x2-q0l" id="Omy-GF-Bjf"/>
+                            <outlet property="delegate" destination="aLE-x2-q0l" id="OVY-Lp-Lbu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Wex-gE-fZT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRg-1S-u34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="1451.4242878560722"/>
+        </scene>
+        <!--Contact DetailVC-->
+        <scene sceneID="Xv7-uw-Sht">
+            <objects>
+                <viewController id="wZx-Zq-dNq" customClass="ContactDetailVC" customModule="Day9CollectionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xM2-4d-gBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-nv-e1k">
+                                <rect key="frame" x="23" y="303" width="96" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Call.png"/>
+                                <connections>
+                                    <action selector="btnCallAction:" destination="wZx-Zq-dNq" eventType="touchUpInside" id="Cd0-S3-MNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33S-T0-HW2">
+                                <rect key="frame" x="245" y="303" width="109" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Message.png"/>
+                                <connections>
+                                    <action selector="btnTextAction:" destination="wZx-Zq-dNq" eventType="touchUpInside" id="Cfd-E1-d2R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOQ-F0-cBS">
+                                <rect key="frame" x="23" y="437" width="136" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Email.png"/>
+                                <connections>
+                                    <action selector="btnEmailAction:" destination="wZx-Zq-dNq" eventType="touchUpInside" id="NGj-oJ-RyA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-eF-XGr">
+                                <rect key="frame" x="51" y="397" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-mQ-rSs">
+                                <rect key="frame" x="269" y="397" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOj-ud-yNm">
+                                <rect key="frame" x="51" y="529" width="68" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="CLT-qT-hrD">
+                                <rect key="frame" x="0.0" y="34" width="375" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WE4-ho-UzK"/>
+                    </view>
+                    <connections>
+                        <outlet property="happy" destination="CLT-qT-hrD" id="SPE-ag-iLl"/>
+                        <outlet property="lblCall" destination="h0E-eF-XGr" id="ven-yE-xim"/>
+                        <outlet property="lblEmail" destination="aOj-ud-yNm" id="RMv-U8-gWs"/>
+                        <outlet property="lblText" destination="Zg4-mQ-rSs" id="hbc-zu-2BM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDr-pZ-UI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="1451.4242878560722"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Books.png" width="25" height="25"/>
+        <image name="Call.png" width="96" height="96"/>
+        <image name="Email.png" width="96" height="96"/>
+        <image name="Message.png" width="96" height="96"/>
+        <image name="Video.png" width="25" height="25"/>
+        <image name="happy.jpeg" width="236" height="214"/>
+    </resources>
+</document>
